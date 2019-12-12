@@ -19,7 +19,7 @@ class Home extends React.PureComponent {
     return (
       <div className="home-container">
         { isFetching && <Loading /> }
-        { !isFetching && <ListSearch /> }
+        { !isFetching && <ListSearch placeholder="search web series" /> }
         { isFetched && lists.length > 0 && <WebSeriesList /> }
         { isFetched && <SearchResultNotFound /> }
       </div>
