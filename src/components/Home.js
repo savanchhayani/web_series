@@ -1,6 +1,7 @@
 import React from "react";
 import WebSeriesList from "../containers/WebSeriesList";
 import { Loading } from "./Loading";
+import ListSearch from "../containers/ListSearch";
 
 class Home extends React.PureComponent {
   componentDidMount() {
@@ -13,6 +14,7 @@ class Home extends React.PureComponent {
     return (
       <div>
         { isFetching && <Loading />}
+        <ListSearch />
         { isFetched && <WebSeriesList />}
       </div>
     )
