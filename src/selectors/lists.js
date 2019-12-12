@@ -11,4 +11,18 @@ const getFilteredLists = createSelector(
   },
 );
 
-export { getFilteredLists, getSearchedSeries }
+const getNoSearchResultMessage = createSelector(
+  [getFilteredLists, getSearchedSeries],
+  (lists, searchedSeriesText) => {
+    if (searchedSeriesText.trim() !== '' && lists.length === 0) {
+      return `No web series found match with ${searchedSeriesText}`;
+    }
+    return '';
+  },
+)
+
+export {
+  getFilteredLists,
+  getSearchedSeries,
+  getNoSearchResultMessage,
+}

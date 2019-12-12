@@ -10,7 +10,7 @@ const initialState = {
   isFetching: false,
   isFetched: false,
   error: null,
-  searchedSeriesText: 'Ali Nikolaus',
+  searchedSeriesText: '',
   lists: [],
 };
 

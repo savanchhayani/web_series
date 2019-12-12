@@ -5,7 +5,7 @@ export default class WebSeriesList extends Component {
     const { lists } = this.props;
     return (
       <div className="web-series-list--container">
-        {lists.map(item => <div>{item.name}</div>)}
+        {lists.map(item => <div key={`item-${item.email}`}>{item.name}</div>)}
       </div>
     )
   }
