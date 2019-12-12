@@ -1,5 +1,6 @@
 import React from "react";
 import WebSeriesList from "../containers/WebSeriesList";
+import { Loading } from "./Loading";
 
 class Home extends React.PureComponent {
   componentDidMount() {
@@ -11,7 +12,7 @@ class Home extends React.PureComponent {
 
     return (
       <div>
-        { isFetching && <div>Data is loading</div>}
+        { isFetching && <Loading />}
         { isFetched && <WebSeriesList />}
       </div>
     )
