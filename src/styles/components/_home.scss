@@ -1,0 +1,13 @@
+.home-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  .search-component {
+    margin-bottom: 50px;
+  }
+
+  .message-component {
+    text-align: center;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./variables";
+@import "./components";
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(31, 28, 46);
+}

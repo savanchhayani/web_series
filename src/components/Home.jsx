@@ -10,14 +10,18 @@ class Home extends React.PureComponent {
   }
 
   render() {
-    const { isFetching, isFetched } = this.props;
+    const {
+      isFetching,
+      isFetched,
+      lists,
+    } = this.props;
 
     return (
-      <div>
-        { isFetching && <Loading />}
-        <ListSearch />
-        { isFetched && <WebSeriesList />}
-        { isFetched && <SearchResultNotFound />}
+      <div className="home-container">
+        { isFetching && <Loading /> }
+        { !isFetching && <ListSearch /> }
+        { isFetched && lists.length > 0 && <WebSeriesList /> }
+        { isFetched && <SearchResultNotFound /> }
       </div>
     )
   }
