@@ -7,6 +7,7 @@ const getSearchedSeriesText = state => state.lists.searchedSeriesText;
  * filters the web series with the searched text.
  * if search text is empty than returns all web series.
  * else returns the list of the matched serch text web series.
+ * @returns {Object [] || []}
  */
 const getFilteredLists = createSelector(
   [getLists, getSearchedSeriesText],

@@ -4,7 +4,6 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from './reducers';
 import rootSaga from './middleware/sagas';
 
-
 const sagaMiddleware = createSagaMiddleware();
 
 const configureStore = () => {
@@ -16,7 +15,6 @@ const configureStore = () => {
   const store = createStore(rootReducer, applyMiddleware(...appliedMiddleWares));
   return store;
 };
-
 
 const store = configureStore();
 

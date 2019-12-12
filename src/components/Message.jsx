@@ -1,4 +1,12 @@
 import React from 'react';
 
-const Message = (props) => <div className={`message-component ${props.className}`}>{props.message}</div>;
+/**
+ * Generic message component to display message by message property.
+ * @param {Object} props - components properties
+ */
+const Message = (props) =>
+  <div className={`message-component ${props.className}`}>
+    {props.message}
+  </div>;
+
 export default Message;

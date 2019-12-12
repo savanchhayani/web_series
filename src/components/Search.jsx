@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Search = (props) => {
-  return <input
+/**
+ * Search input component
+ * @param {Object} props - components properties
+ */
+const Search = (props) => 
+  <input
     type="text"
     className= "search-component"
     placeholder={props.placeholder || ''}
     value={props.value}
     onChange={props.onChange}
   />
-}
 
 export default Search;
